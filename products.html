@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <meta name="description" content="Plantoria - Your one-stop shop for plants and plant care equipment">
+    <title>Plantoria Plant Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="products">
+    <main id="main-content" class="plant-store-section">
+        <div class="hero-container-products">
+            <img src="toppic.jpg" class="hero-image-products"> 
+            
+            <!-- Navigation -->
+            <nav class="nav-container" role="navigation" aria-label="Main navigation">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-active" aria-current="page">START</a>
+                    <a href="products.html">PRODUCTS</a>
+                    <a href="aboutus.html">ABOUT US</a>
+                </div>
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5fc6780ed3cf247413261987584482cf459c19c2a65ed76ec69a2081953d0224?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
+                     alt="Plantoria" class="logo">
+                <div class="nav-icons">
+                    <button aria-label="Search" class="icon">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1569bbf8b91dc68c07a75484a57f4b5bd793222dcca50c229861832f2f85a6e?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
+                             alt="" role="presentation">
+                    </button>
+                    <button aria-label="Shopping cart" class="iconCart">
+                        <img id="shoppingbag" src="cart2.svg" alt="" role="presentation">
+                        <span id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="searchbar-container">
+                <form action="search.html" method="get" role="search">
+                    <div class="searchbar-wrapper">
+                        <input type="text" name="query" class="searchbar" placeholder="SEARCH FOR A SPECIFIC TYPE OF PLANT ..." aria-label="Search">
+                            <button type="submit" class="search-icon">
+                            <img src="search.png" alt="Search" class="search-icon-img">
+                            </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="vertical-line-products"></div>
+
+        <!-- Text Section -->
+        <section class="search-section">
+            <p class="quicksand-regular">LOOKING FOR SOMETHING SPECIFIC?</p>
+            <br>
+            <p>USE THE SEARCH BAR TO EXPLORE <br>A WIDE RANGE OF PLANT SPECIES,<br>FROM RARE GEMS TO POPULAR <br>FAVORITES - OR BROWSE THROUGH <br>THE IMAGES BELOW FOR INSPIRATION!</p>
+        </section>
+
+        <!--Filter Button -->
+        <button class="filter-button" id="filter-button">
+            <img src="filter.svg" width="25px" height="25px" alt="filtericon" class="button-icon">
+            FILTER
+        </button>  
+
+        <div class="filter-container">
+            <button class="close-button">
+                <img src="close.png" alt="Close" class="close-icon">
+            </button>
+
+            <!-- SIZE -->
+            <div class="filter-section">
+                <p class="quicksand-regular">SIZE</p>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="size" id="size-xs" value="XS" />
+                    <label for="size-xs">XS</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="size" id="size-s" value="S"/>
+                    <label for="size-s">S</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="size" id="size-m" value="M"/>
+                    <label for="size-m">M</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="size" id="size-l" value="L"/>
+                    <label for="size-l">L</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="size" id="size-xl" value="XL"/>
+                    <label for="size-xl">XL</label>
+                </div>
+            </div>
+        
+            <!-- FAMILY -->
+            <div class="filter-section">
+                <p class="quicksand-regular">FAMILY</p>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="family" id="family-caladium" value="CALADIUM"/>
+                    <label for="family-caladium">CALADIUM</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="family" id="family-drac" value="DRACAENA"/>
+                    <label for="family-drac">DRACAENA</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="family" id="family-monstera" value="MONSTERA"/>
+                    <label for="family-monstera">MONSTERA</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="family" id="family-philo" value="PHILODENDRON"/>
+                    <label for="family-philo">PHILODENDRON</label>
+                </div>
+            </div>
+        
+            <!-- LIGHT LOCATION -->
+            <div class="filter-section">
+                <p class="quicksand-regular">LIGHT LOCATION</p>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="light" id="light-sunny" value="SUNNY"/>
+                    <label for="light-sunny">SUNNY</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="light" id="light-bright" value="BRIGHT"/>
+                    <label for="light-bright">BRIGHT</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="light" id="light-shady" value="SHADY"/>
+                    <label for="light-shady">SHADY</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="light" id="light-part" value="PARTICIALLY SHADED"/>
+                    <label for="light-part">PARTICIALLY SHADED</label>
+                </div>
+            </div>
+        
+            <!-- WATER NEEDS -->
+            <div class="filter-section">
+                <p class="quicksand-regular">WATER NEEDS</p>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="water" id="water-low" value="LOW" />
+                    <label for="water-low">LOW</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="water" id="water-moderate" value="MODERATE"/>
+                    <label for="water-moderate">MODERATE</label>
+                </div>
+                <div class="filter-checkbox">
+                    <input type="checkbox" name="water" id="water-high" value="HIGH" />
+                    <label for="water-high">HIGH</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- plants Section -->
+        <div class="plant-grid-container">
+      
+        <!-- Produkte -->
+        <section class="plant-grid" aria-label="plants">
+                
+                <!-- 1.Reihe --> 
+                <article class="plant-card" data-size="XL" data-family="STRELITZIA" data-light="BRIGHT" data-water="MODERATE">
+                    <a href="birdplant.html">
+                        <img src="bird.jpg" alt="Bird of Paradise">
+                    </a>
+                    <p class="common-name">BIRD OF PARADISE</p>
+                    <p class="scientific-name">STRELITZIA NICOLAI</p>
+                    <div class="price-and-button">
+                        <p class="price">34.99€</p>
+                        <!-- Button außerhalb des Links -->
+                        <button onclick="singleAddToCartBird(event);">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+            
+                <article class="plant-card" data-size="L" data-family="MONSTERA" data-light="PARTICIALLY SHADED" data-water="MODERATE">
+                    <a href="swiss.html" class="plant-link">
+                        <img src="swiss.jpg" alt="Swiss Cheese Plant">
+                    </a>
+                    <p class="common-name">SWISS CHEESE PLANT</p>
+                    <p class="scientific-name">MONSTERA</p>
+                    <div class="price-and-button">
+                        <p class="price">32.99€</p>
+                        <button onclick="singleAddToCart();">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+            
+                <article class="plant-card" data-size="S" data-family="MARANTA" data-light="BRIGHT" data-water="HIGH">
+                    <a href="maranta.html" class="plant-link">
+                        <img src="maranta.jpg" alt="Maranta">
+                    </a>
+                    <p class="common-name">MARANTA 'FASCINATOR TRICOLOR'</p>
+                    <p class="scientific-name">MARANTA LEUCONEURA</p>
+                    <div class="price-and-button">
+                        <p class="price">23.95€</p>
+                        <button onclick="singleAddToCart();">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+
+               <!-- 2.Reihe --> 
+                <article class="plant-card" data-size="M" data-family="MONSTERA" data-light="PARTICIALLY SHADED" data-water="MODERATE">
+                    <a href="minima.html" class="plant-link">
+                        <img src="mini.jpg" alt="Minima">
+                    </a>
+                    <p class="common-name">MONSTERA MINIMA</p>
+                    <p class="scientific-name">RHAPHIDOPHORA TETRASPERMA</p>
+                    <div class="price-and-button">
+                        <p class="price">18.99€</p>
+                        <button onclick="singleAddToCart();">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <article class="plant-card" data-size="XS" data-family="CALADIUM" data-light="PARTICIALLY SHADED" data-water="MODERATE">
+                    <a href="painted.html" class="plant-link">
+                        <img src="caladium.jpg" alt="paintedleaf">
+                    </a>
+                    <p class="common-name">PAINTED LEAF</p>
+                    <p class="scientific-name">CALADIUM BICOLOR</p>
+                    <div class="price-and-button">
+                        <p class="price">9.95€</p>
+                        <button onclick="singleAddToCart();">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <article class="plant-card" data-size="L" data-family="DRACAENA" data-light="SHADY" data-water="LOW">
+                    <a href="dragon.html" class="plant-link">
+                        <img src="dracaena.jpg" alt="dragontree">
+                    </a>
+                    <p class="common-name">DRAGONTREE</p>
+                    <p class="scientific-name">DRACAENA</p>
+                    <div class="price-and-button">
+                        <p class="price">22.95€</p>
+                        <button onclick="singleAddToCart();">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <!-- 3.Reihe --> 
+                <article class="plant-card" data-size="S" data-family="PHILODENDRON" data-light="BRIGHT" data-water="MODERATE">
+                    <a href="imperial.html" class="plant-link">
+                        <img src="philo.jpg" alt="imperial">
+                    </a>
+                    <p class="common-name">IMPERIAL RED</p>
+                    <p class="scientific-name">PHILODENDRON</p>
+                    <div class="price-and-button">
+                        <p class="price">11.99€</p>
+                        <button onclick="singleAddToCart();">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <article class="plant-card" data-size="L" data-family="MONSTERA" data-light="BRIGHT" data-water="LOW">
+                    <a href="varie.html" class="plant-link">
+                        <img src="deli.jpg" alt="deliciosa">
+                    </a>
+                    <p class="common-name">DELICIOSA VARIEGATED</p>
+                    <p class="scientific-name">MONSTERA</p>
+                    <div class="price-and-button">
+                        <p class="price">61.99€</p>
+                        <button onclick="singleAddToCart();">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+
+                <article class="plant-card" data-size="XS" data-family="MONSTERA" data-light="BRIGHT" data-water="LOW">
+                    <a href="thai.html" class="plant-link">
+                        <img src="thai.jpg" alt="thai">
+                    </a>
+                    <p class="common-name">THAI CONSTELLATION</p>
+                    <p class="scientific-name">MONSTERA</p>
+                    <div class="price-and-button">
+                        <p class="price">32.99€</p>
+                        <button onclick="singleAddToCart();">
+                            <img src="cart.svg" alt="carticon" class="button-icon">
+                            ADD TO CART
+                        </button>
+                    </div>
+                </article>
+        </section>
+    </div>
+
+        <footer class="footer">
+            <p class="footer-text no-hover">
+                ©2025 PLANTORIA. ALL RIGHTS RESERVED.
+            </p>
+            <div class="footer-links">
+                <span class="footer-text hover-effect">IMPRINT</span>
+                <span class="footer-text hover-effect">PRIVACY POLICY</span>
+            </div>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,982 @@
+:root {
+    --primary-color: #347060;
+    --text-color: #000;
+    --bg-color: #fff;
+    --stroke-color: #D9D9D9;
+    --shadow-color: rgba(149, 149, 149, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px dashed red;*/
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 12%;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-bottom: 0;
+    text-align: center;
+    min-height: 100vh;
+    overflow: visible;
+    margin: 0;
+}
+
+.quicksand-regular {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.bigfont {
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.plant-store-section {
+    background-color: var(--bg-color);
+    display: flex;
+    padding-bottom: 5px;
+    flex-direction: column;
+    align-items: center;
+    min-height: 700px;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 759px;
+
+}
+
+.hero-container-products {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.hero-image-products {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    z-index: 10000;
+
+    display: flex;
+    justify-content: space-between; /* Links nach links, Icons nach rechts */
+    align-items: center; /* Vertikale Ausrichtung */
+    padding: 16px;
+}
+
+.nav-container .logo {
+    position: absolute;
+    left: 50%; /* Positionierung in der Mitte */
+    transform: translateX(-50%);
+    height: 56px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex; /* Macht die Links horizontal nebeneinander */
+    gap: 30px; /* Abstand zwischen den Links */
+    font-size: 16px;
+    font-weight: 300;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 12%;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color); /* Optional: Farbe beim Hover ändern */
+    text-decoration: none;
+}
+
+.nav-active {
+    color: var(--primary-color);
+}
+
+/* Icons */
+.nav-icons {
+    display: flex;
+    gap: 16px; /* Abstand zwischen Icons */
+    align-items: center; /* Vertikale Ausrichtung */
+    margin-left: auto; /* Verschiebt Icons nach rechts */
+}
+
+.nav-icons .icon,
+.nav-icons .iconCart {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icons .icon {
+    position: relative; /* Für den Zähler */
+    width: 30px; /* Einheitliche Breite */
+    height: 30px; /* Einheitliche Höhe */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none; /* Kein Rahmen */
+    background-color: transparent; /* Kein Hintergrund */
+    padding: 0; /* Kein zusätzliches Padding */
+}
+
+.nav-icons .iconCart{
+    position: relative; /* Für den Zähler */
+    width: 50px; /* Einheitliche Breite */
+    height: 50px; /* Einheitliche Höhe */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none; /* Kein Rahmen */
+    background-color: transparent; /* Kein Hintergrund */
+    padding: 0; /* Kein zusätzliches Padding */
+}
+
+.nav-icons .icon img,
+.nav-icons .iconCart img {
+    width: 100%; /* Bild füllt den Container */
+    height: 100%;
+    display: block;
+}
+
+#cart-count {
+    position: absolute;
+    top: 0px; /* Positionierung relativ zum Icon */
+    right: 0px; /* Positionierung relativ zum Icon */
+    background-color: var(--primary-color); /* Farbe des Kreises */
+    color: white; /* Farbe der Zahl */
+    width: 20px; /* Breite des Kreises */
+    height: 20px; /* Höhe des Kreises */
+    border-radius: 50%; /* Macht das Element zu einem Kreis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px; /* Schriftgröße der Zahl */
+    font-weight: bold; /* Fettgedruckte Schrift */
+}
+
+
+.vertical-line {
+    position: absolute; 
+    top: 590px;             
+    left: 50%;          
+    transform: translateX(-50%); 
+    height: 100px;     
+    width: 1px;         
+    background-color: black; 
+    z-index: 10;        /*Linie sichtbar ist */
+}
+
+.vertical-line-bottom {
+    position: absolute; 
+    top: 2100px;             
+    left: 50%;          
+    transform: translateX(-50%); 
+    height: 100px;     
+    width: 1px;         
+    background-color: black; 
+    z-index: 10;        /*Linie sichtbar ist */
+}
+
+.vertical-line-aboutus {
+    position: absolute; 
+    top: 200px;             
+    left: 50%;          
+    transform: translateX(-50%); 
+    height: 100px;     
+    width: 1px;         
+    background-color: black; 
+    z-index: 10;        
+}
+
+.vertical-line-products {
+    position: absolute; 
+    top: 465px;             
+    left: 50%;          
+    transform: translateX(-50%); 
+    height: 100px;     
+    width: 1px;         
+    background-color: black; 
+    z-index: 10;        
+}
+
+.text-container{
+    z-index: 500;
+    margin: -450px;
+    margin-bottom: 380px;
+}
+
+.welcome-section {
+    text-align: center;
+    margin: -50px auto 0;
+    max-width: 800px;
+    padding: 0 16px;
+}
+
+.search-section {
+    text-align: center;
+}
+
+.equip-section {
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 200px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1300px;
+    margin: 100px;
+    padding: 0 16px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    height: 500px;
+}
+
+.product-image {
+    align-items: center;
+    object-fit: cover;   
+}
+
+.textimages{
+    margin-top: -120px;
+}
+
+.shop-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--primary-color);
+    text-decoration: none;
+    letter-spacing: 12%;
+}
+
+.shop-link img{
+    width: 16px;
+    height: 16px;
+}
+
+.shop-link:hover{
+    text-decoration: underline;
+}
+
+.cta-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    margin-top: -70px;
+    padding: 20px;
+}
+
+.cta-heading {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 12%;
+    margin-bottom: 32px;
+}
+
+.cta-button {
+    background-color: var(--bg-color);
+    border: none;
+    padding: 16px 32px;
+    font-size: 13px;
+    letter-spacing: 1.56px;
+    cursor: pointer;
+    margin-top: 32px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.footer {
+    text-align: center;
+    padding: 24px 24px; 
+    border-top: 1px solid var(--shadow-color); 
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+    width: 100%; 
+    margin-top: 32px; 
+}
+
+.footer-text {
+    font-size: 14px;
+    letter-spacing: 12%;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--text-color);
+    z-index: 10;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.no-hover {
+    color: var(--text-color);  /* Kein Hover-Effekt hier */
+}
+
+.hover-effect {
+    cursor: pointer;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.hover-effect:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/*Searchbar*/
+
+.searchbar-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    z-index: 1000;
+    position: relative;
+    margin-top: 330px;
+}
+
+.searchbar-wrapper {
+    position: relative;
+    width: 400px;
+}
+
+.searchbar {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #D9D9D9;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 30px; /* Platz für das Symbol */
+    
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px; /* Abstand von der rechten Seite */
+    top: 50%;
+    transform: translateY(-50%); /* Vertikal mittig ausrichten */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.search-icon-img {
+    width: 25px; /* Größe des Lupe-Bildes */
+    height: 25px;
+}
+
+.searchbar:focus {
+    outline: none; /* Entfernt die blaue Umrandung */
+}
+
+/*Plant Grid*/
+
+.plant-grid-container {
+    position: relative;
+    margin-top: 100px;
+}
+
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Spalten */
+    gap: 20px; /* Abstand zwischen den Karten */
+    margin-left: 300px; 
+    padding: 20px;
+    z-index: 1;
+  }
+  
+  .plant-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff; /* Weißer Hintergrund */
+    stroke: #D9D9D9;
+    stroke-width: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten */
+    text-align: left;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 13px;
+    position: relative; /* Für die Platzierung von Elementen innerhalb der Karte */
+    cursor: pointer;
+  }
+  
+  .plant-card img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .plant-card p {
+    margin: 1px 0;
+  }
+
+  .plant-card a {
+    display: inline-block; /* Stellt sicher, dass nur der Inhalt des Links klickbar ist */
+    text-decoration: none; /* Entfernt Standard-Text-Unterstreichungen */
+}
+
+.common-name {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.scientific-name{
+    font-family: 'Quicksand', sans-serif;
+}
+  
+  .plant-card .price-and-button {
+    display: flex;
+    justify-content: space-between; /* Platzieren: links Preis, rechts Button */
+    align-items: center;
+    margin-top: 20px;
+    bottom: 10px; /* Abstand vom unteren Rand */
+    left: 10px;
+    right: 10px;
+  }
+  
+  .plant-card button {
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 13px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    padding: 5px 20px;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Zentriert das Icon und den Text vertikal */
+    justify-content: center;
+    gap: 3px;
+    white-space: nowrap; /* Verhindert den Umbruch des Textes */
+}
+
+.plant-card button .button-icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--primary-color);
+    display: block;
+    margin: 0; 
+}
+
+.plant-card button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.plant-card button:hover .button-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(110%) contrast(110%); /*Icon beim Hovern weiß*/
+}
+
+/* Filter-Button */
+
+.filter-button {
+    display: flex;
+    position: absolute;
+    align-items: center; /* Zentriert das Icon und den Text vertikal */
+    justify-content: center;
+    gap: 3px;
+    white-space: nowrap; /* Verhindert den Umbruch des Textes */
+    margin-top:850px;
+    margin-right: 90%;
+    background-color: white;
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 1.5;
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    padding: 5px 20px;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    z-index: 900;
+}
+
+.filter-button .filter-icon {
+    width: 5px;
+    height: 5px;
+    fill: var(--primary-color);
+    display: block;
+    margin: 0; 
+}
+
+.filter-button.fixed {
+    position: fixed;
+    top: 830px;
+    z-index: 100;
+    opacity: 1;
+}
+
+/* Filter ausgeklappt */
+
+.filter-button-wrapper {
+    position: relative;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px; /* Abstand zwischen den Abschnitten */
+    background-color: rgba(217, 217, 217, 0.26); /* Hintergrundfarbe mit Transparenz */
+    border: 1px solid #D9D9D9; 
+    padding: 20px; 
+    width: 100%; 
+    max-width: 280px; 
+    position: absolute;
+    display: none;
+    z-index: 100;
+}
+
+.close-button {
+    position: absolute;
+    top: 7px; /* Abstand vom oberen Rand */
+    right: 7px; /* Abstand vom rechten Rand */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    width: 24px; /* Größe des Buttons */
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-icon {
+    width: 15px; /* Größe des Icons */
+    height: 15px;
+    object-fit: cover;
+    display: block;
+}
+
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Abstand zwischen Checkboxen */
+    margin-bottom: 10px;
+}
+
+/* Container für die Checkbox und das Label */
+.filter-checkbox {
+    display: block; /* Zeigt jedes Element in einer neuen Zeile */
+    margin-bottom: 5px; /* Abstand zwischen den Checkboxen */
+    position: relative; /* Für die Positionierung der Checkbox */
+}
+
+/* Die Checkbox selber */
+.filter-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    vertical-align: middle;
+    appearance: none; /* Entfernt das Standard-Design der Checkbox */
+    border: 1px solid var(--text-color);
+    background-color: white;
+    cursor: pointer;
+    position: relative; /* Position für das Häkchen */
+}
+
+/* Hover-Effekt: Borderline wird grün */
+.filter-checkbox input[type="checkbox"]:hover {
+    border-color: var(--primary-color); 
+}
+
+/* Wenn die Checkbox angeklickt wird, ändert sich die Hintergrundfarbe */
+.filter-checkbox input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+}
+
+/* Das Häkchen anzeigen, wenn die Checkbox angeklickt ist */
+.filter-checkbox input[type="checkbox"]:checked::before {
+    content: "✔"; /* Das Häkchen */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriert das Häkchen */
+    font-size: 16px; /* Passt die Größe des Häkchens an */
+    color: white; /* Häkchenfarbe */
+}
+
+/* Das Label für die Checkbox */
+.filter-checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap; /* Verhindert den Zeilenumbruch im Text */
+}
+
+
+
+.product-view {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    max-width: 1440px;
+    margin: 10px;
+    margin-left: 100px;
+    width: 100%;
+}
+
+.product-container {
+    display: flex;
+}
+
+.product-image-section {
+    flex: 1;
+}
+
+.back-button {
+    position: absolute; /* Wichtig: Position absolut setzen */
+    top: 130px; /* Abstand vom oberen Rand */
+    left: 108px; /* Abstand vom linken Rand */
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 12%;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 5000;
+    text-decoration: none;
+}
+
+.back-button:hover,
+.back-button:focus {
+    color: var(--primary-color);
+}
+
+/*----PLANTS Rest---*/
+.pics,
+.pics * {
+  box-sizing: border-box;
+}
+.pics {
+  position: absolute;
+  display: flex; /* Elemente nebeneinander ausrichten */
+  align-items: center; /* Vertikale Zentrierung */
+}
+.pic1 {
+  width: 500px;
+  height: 513px;
+  position: absolute;
+  left: 7px;
+  top: 0px;
+  object-fit: cover;
+}
+.pic2 {
+  width: 245px;
+  height: 235px;
+  position: absolute;
+  left: 262px;
+  top: 523px;
+  object-fit: cover;
+}
+.pic3 {
+  width: 245px;
+  height: 235px;
+  position: absolute;
+  left: 7px;
+  top: 523px;
+  object-fit: cover;
+}
+
+.product-image {
+    width: 80%;
+    height: 800px;
+    margin-top: -10px;
+    margin-bottom: 150px;
+    gap: 30px;
+}
+
+.product-details {
+    flex: 1;
+    padding-top: -10px;
+    padding-left: 550px;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 12%;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 12%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.quantity-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-color);
+    white-space: nowrap;
+    text-align: center;
+    gap: 5px; /* Abstand zwischen Symbolen */
+}
+
+.quantity-cart-container {
+    display: flex;  /* Flexbox für nebeneinander */
+    align-items: center;  /* Vertikale Zentrierung */
+    gap: 10px;  /* Abstand zwischen Menge und Button */
+}
+
+.quantity-selector {
+    display: inline-flex;
+    width:auto;
+    align-items: center;
+    gap: 10px; /* Abstand zwischen Symbolen */
+    padding: 7px; /* Innenabstand für den Rahmen */
+    border: 1px solid var(--stroke-color); /* Rahmen um die gesamte Gruppe */
+    
+}
+
+.quantity-decrease,
+.quantity-increase {
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none; /* Entfernt den Hintergrund */
+    border: none; /* Entfernt den Rahmen */
+}
+
+.quantity-value {
+    font-size: 16px; /* Kleinere Schriftgröße */
+    margin: 0 10px; /* Abstand zu Symbolen */
+}
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+
+  .cart-button {
+    display: flex;
+    max-width: 150px; 
+    flex-direction: column;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font: 400 13px/1 Quicksand, sans-serif;
+    letter-spacing: 12%;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .cart-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+    padding: 7px;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .cart-icon {
+    object-fit: contain;
+    object-position: center;
+    width: 30px;
+    align-self:auto;
+  }
+  
+  .cart-text {
+    font-size: 14px;
+    margin-left: 5px;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 18px;
+  }
+
+  .cart-button:hover .cart-button-wrapper {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color); /* Verhindert Farbwechsel im Rand */
+}
+
+.cart-button:hover .cart-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(110%) contrast(110%); /*Icon beim Hovern weiß*/
+}
+
+.shipping-info-list {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.shipping-info-list li {
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 12%;
+    text-transform: uppercase;
+    padding: 2px;
+}
+
+.product-specs {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+    background: rgba(217, 217, 217, 0.26);
+    border: 1px solid #d9d9d9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.spec-item {
+    text-align: center;
+}
+
+.spec-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.spec-label {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 12%;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.spec-value {
+    font-size: 13px;
+    letter-spacing: 12%;
+    text-transform: uppercase;
+}
+
+.recommendations-title {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 12%;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.recommended-products {
+    list-style: none;
+    padding-bottom: 200px;
+}
+
+.recommended-product {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 12%;
+    padding: 2px;
+    text-transform: uppercase;
+}
+
+.recommended-product:hover,
+.recommended-product:focus {
+    text-decoration: underline;
+}
+
+.recommended-icon {
+    width: 15px;
+    height: 15px;
+}
+

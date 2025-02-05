@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <meta name="description" content="Plantoria - Your one-stop shop for plants and plant care equipment">
+    <title>Plantoria Plant Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="birdplant">
+    <div class="product-view">
+         
+        <!-- Navigation -->
+         <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <div class="nav-links">
+                <a href="index.html" class="nav-active" aria-current="page">START</a>
+                <a href="products.html">PRODUCTS</a>
+                <a href="aboutus.html">ABOUT US</a>
+            </div>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5fc6780ed3cf247413261987584482cf459c19c2a65ed76ec69a2081953d0224?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
+                 alt="Plantoria" class="logo">
+            <div class="nav-icons">
+                <button aria-label="Search" class="icon">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1569bbf8b91dc68c07a75484a57f4b5bd793222dcca50c229861832f2f85a6e?apiKey=e3a32a99e63047f7955558b7fdd1ba73&" 
+                         alt="" role="presentation">
+                </button>
+                <button aria-label="Shopping cart" class="iconCart">
+                    <img id="shoppingbag" src="cart2.svg" alt="" role="presentation">
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+        
+        <main class="main-content">
+            <div class="product-container">
+                <!-- Back-Button als Link -->
+                <a href="products.html" class="back-button" aria-label="Go back to previous page">
+                    <span aria-hidden="true">&lt;</span> BACK
+                </a>
+                
+                <div class="pics">
+                    <img
+                      class="pic1"
+                      src="bird.jpg"
+                    />
+                    <img class="pic2" src="bird2.jpg" />
+                    <img class="pic3" src="bird3.jpg" />
+                  </div>
+                  
+                
+                <section class="product-details">
+                    <h1 class="product-title">Strelitzia Nicolai (Bird of Paradise)</h1>
+                    <div class="product-price" aria-label="Price">34.99€</div>
+                    
+                    <p class="product-description">
+                        The Strelitzia, commonly known as the Bird of Paradise, is a striking tropical plant native to South Africa. Its name comes from its exotic, bird-like flowers that bloom in vibrant shades of orange and blue.<br><br>
+                        Strelitzia thrives in bright, indirect light and prefers warm temperatures, making it a popular choice for indoor spaces and tropical gardens.
+                        It requires moderate watering, allowing the soil to dry slightly between waterings.<br><br>With its bold, architectural leaves and unique flowers, the Strelitzia adds a touch of elegance and exotic beauty to any environment.
+                    </p>
+                    
+                    <div class="quantity-cart-container">
+                        <!-- Quantity Selector -->
+                        <div class="quantity-selector" role="group" aria-label="Quantity selector">
+                            <span class="quantity-decrease">-</span>
+                            <span class="quantity-value">01</span>
+                            <span class="quantity-increase">+</span>
+                        </div>
+                        <!-- Cart Button -->
+                        <button class="cart-button" aria-label="Add item to shopping cart">
+                            <div class="cart-button-wrapper">
+                                <img src="cart.svg" class="cart-icon" alt="carticon" />
+                                <span class="cart-text">ADD TO CART</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <ul class="shipping-info-list" aria-label="Shipping information">
+                        <li>Free delivery on orders over 50€</li>
+                        <li>Easy and secure checkout</li>
+                        <li>Special shipping in winter</li>
+                    </ul>
+                    
+                    <div class="product-specs" role="list" aria-label="Product specifications">
+                        <div class="spec-item" role="listitem">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/04ecadf1f24d05f5775d14b2608b507a3a243b4d553e8f4f6c35022e1a194bfd?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="" class="spec-icon" aria-hidden="true">
+                            <div class="spec-label">Height</div>
+                            <div class="spec-value">85 cm</div>
+                        </div>
+                        
+                        <div class="spec-item" role="listitem">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/41fedfc83cca257d03a123b6f5744961b35c29f8568a097d3a4fae114c7026e6?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="" class="spec-icon" aria-hidden="true">
+                            <div class="spec-label">Pot size</div>
+                            <div class="spec-value">17 cm</div>
+                        </div>
+                        
+                        <div class="spec-item" role="listitem">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/616e1cba7f82d518cb8de2d2f3a9b69591938f20c8a1565d71c5923d562c5e1c?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="" class="spec-icon" aria-hidden="true">
+                            <div class="spec-label">Light</div>
+                            <div class="spec-value">Bright</div>
+                        </div>
+                        
+                        <div class="spec-item" role="listitem">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d03b9bf07ade7f35e861962b9cc51bef4b5a0ceb9912609038d33dcfbcb8f8bb?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="" class="spec-icon" aria-hidden="true">
+                            <div class="spec-label">Water</div>
+                            <div class="spec-value">Moderate</div>
+                        </div>
+                    </div>
+                    
+                    <section class="recommendations" aria-labelledby="recommendations-title">
+                        <h2 id="recommendations-title" class="recommendations-title">Maybe you will also like these plants?</h2>
+                        <ul class="recommended-products">
+                            <li>
+                                <a href="/products/heliconia" class="recommended-product">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a56ec1d0110a4138fa2947007bcf1344bbea04ead5e2db0620dc6e35ffcbafd9?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="" class="recommended-icon" aria-hidden="true">
+                                    <span>Heliconia</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/products/banana-plant" class="recommended-product">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a56ec1d0110a4138fa2947007bcf1344bbea04ead5e2db0620dc6e35ffcbafd9?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="" class="recommended-icon" aria-hidden="true">
+                                    <span>Banana Plant</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/products/banana-plant" class="recommended-product">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a56ec1d0110a4138fa2947007bcf1344bbea04ead5e2db0620dc6e35ffcbafd9?placeholderIfAbsent=true&apiKey=e3a32a99e63047f7955558b7fdd1ba73" alt="" class="recommended-icon" aria-hidden="true">
+                                    <span>Anthurium</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </div> 
+            
+        <footer class="footer">
+            <p class="footer-text no-hover">
+                ©2025 PLANTORIA. ALL RIGHTS RESERVED.
+            </p>
+            <div class="footer-links">
+                <span class="footer-text hover-effect">IMPRINT</span>
+                <span class="footer-text hover-effect">PRIVACY POLICY</span>
+            </div>
+        </footer>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
