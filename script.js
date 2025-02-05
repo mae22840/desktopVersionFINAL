@@ -183,10 +183,10 @@ if (page === "products") {
         });
 
         // Event Listener für den Filter-Button
-        const filterbutton= document.querySelector("#filterbutton");
+        // const filterbutton= document.querySelector("#filterbutton");
 
 
-        if (filterbutton) {
+        if (filterButton) {
             filterButton.addEventListener("click", showFilter);
         }
 
