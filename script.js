@@ -185,7 +185,6 @@ if (page === "products") {
         // Event Listener für den Filter-Button
         // const filterbutton= document.querySelector("#filterbutton");
 
-
         if (filterButton) {
             filterButton.addEventListener("click", showFilter);
         }
