@@ -690,7 +690,7 @@ body {
 .main-content {
     flex: 1;
     max-width: 1440px;
-    margin: 10px;
+    margin: 180px;
     margin-left: 100px;
     width: 100%;
 }
